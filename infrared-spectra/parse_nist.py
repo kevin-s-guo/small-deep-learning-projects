@@ -158,12 +158,15 @@ def parse_spectrum(nist_id):
 
         okay = (y > 0.0)
         y[okay] = np.log10(1.0 / y[okay])
-        y[np.logical_not(okay)] = np.nan
+        y[np.logical_not(okay)] = 0
 
     # remove all values over 4000 wn and below 500 wn
     threshold = (x < 4000) & (x > 500)
     x = x[threshold]
     y = y[threshold]
+
+    y_max = np.max(y)
+    y = 100 * y / y_max # normalize to percentage
 
     return x, y
 
