@@ -1,0 +1,13 @@
+Isopropyl amine hydrochloride, ID: C15572562
+  NIST    18042908122D 1   1.00000     0.00000      
+Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.
+  5  3  0     0  0              1 V2000
+    0.0000    1.7756    0.0000 C   0  0  0  0  0  0           0  0  0
+    0.5222    0.8878    0.0000 C   0  0  0  0  0  0           0  0  0
+    1.4622    0.8878    0.0000 N   0  0  0  0  0  0           0  0  0
+    0.0000    0.0000    0.0000 C   0  0  0  0  0  0           0  0  0
+    2.7343    0.9038    0.0000 Cl  0  0  0  0  0  0           0  0  0
+  1  2  1  0     0  0
+  2  3  1  0     0  0
+  2  4  1  0     0  0
+M  END

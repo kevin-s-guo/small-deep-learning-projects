@@ -1,0 +1,11 @@
+Ethylammonium chloride, ID: C557664
+  NIST    18042908122D 1   1.00000     0.00000      
+Copyright by the U.S. Sec. Commerce on behalf of U.S.A. All rights reserved.
+  4  2  0     0  0              1 V2000
+    0.0000    0.0000    0.0000 C   0  0  0  0  0  0           0  0  0
+    0.8619    0.5070    0.0000 C   0  0  0  0  0  0           0  0  0
+    1.7239    0.0000    0.0000 N   0  0  0  0  0  0           0  0  0
+    2.9187    0.0007    0.0000 Cl  0  0  0  0  0  0           0  0  0
+  1  2  1  0     0  0
+  2  3  1  0     0  0
+M  END
