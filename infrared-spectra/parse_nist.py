@@ -8,6 +8,21 @@ functional_groups = ['unfunctionalized alkane', 'alkene', 'alkyne',
                      'aldehyde', 'ketone', 'carboxylic acid', 'ester', 'amide']
                     # will only consider these 11 groups
 
+simplifications = {0: 3,
+                   1: 3,
+                   2: 3,
+                   3: 1,
+                   4: 1,
+                   5: 2,
+                   6: 0,
+                   7: 0,
+                   8: 0,
+                   9: 0,
+                   10: 0}
+
+def simplify_functionality(func):
+    return list(set(list(map(lambda f: simplifications[f], func))))
+
 def characterize(fp):
     """Returns functionality of molecule."""
     with open(fp, 'r') as f:
@@ -120,7 +135,7 @@ def characterize_all_molecules():
         functionality = characterize('nist/mol/' + fp)
         if functionality != []:
             put_to_file += fp.split('.')[0] + ' '
-            put_to_file += ' '.join(map(str, sorted(functionality))) + '\n'
+            put_to_file += ' '.join(map(str, sorted(simplify_functionality(functionality)))) + '\n'
             # print(list(map(lambda i: functional_groups[i], functionality)))
         else:
             # os.remove('nist/mol/' + fp)
@@ -152,7 +167,7 @@ def parse_spectrum(nist_id):
         x = x * 1000.0
         x = 10000.0 / x
 
-    # convert y to absorbance
+    # convert y to absorbancem
     if (yunits == 'transmittance'):
         y[y > 1.0] = 1.0
 
